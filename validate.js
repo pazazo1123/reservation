@@ -3,14 +3,10 @@ function checkNID() {
 	return /^[0-9]{13}$/.test(nid); 
   }
 
-function checkTicketNo() {
-  let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+  function checkTicketNo() {
+	let num = parseInt(document.getElementById("ticknum").value.trim());
+	return (!isNaN(num) && num >= 1 && num <= 5);
   }
-}
 
 function validateForm(){
 	let fname = document.getElementById("fname").value.trim();
