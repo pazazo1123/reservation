@@ -17,6 +17,12 @@ function checkTicketNo() {
 }
 
 function validateForm(){
+	let fname = document.getElementById("fname").value.trim();
+	let lname = document.getElementById("lname").value.trim();
+	if (fname === "" || lname === "") { 
+    alert("Please fill in all fields"); 
+    return false; 
+}
 	if(!checkNID()){
 	  alert("Invalid value for National ID!");
 	  document.getElementById("nid").focus();
